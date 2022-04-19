@@ -21,19 +21,19 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ParamController {
 
-	private final ParamRepository paramRepository;
+	private final ParamRepository repository;
 
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<Param> save(@RequestBody Param param) {
-		paramRepository.save(param);
+		repository.save(param);
 
 		return ResponseEntity.ok(param);
 	}
 
 	@GetMapping
 	public ResponseEntity<Param> read(@RequestParam String key) {
-		Param param = paramRepository.findById(key)
+		Param param = repository.findById(key)
 				.orElseThrow(() -> new NotFoundException("Param " + key + " not found"));
 
 		return ResponseEntity.ok(param);
