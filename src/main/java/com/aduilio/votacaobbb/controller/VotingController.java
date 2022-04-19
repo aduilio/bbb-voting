@@ -21,6 +21,7 @@ public class VotingController {
 	@PostMapping
 	public ResponseEntity<String> vote(@RequestBody Participant participant) {
 		service.addEvent(participant.getId());
+
 		return ResponseEntity.ok()
 				.build();
 	}

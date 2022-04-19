@@ -11,10 +11,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	
-	<groupId>com.aduilio</groupId>
-	<artifactId>votacaobbb</artifactId>
+	<groupId>com.aduilio.bbbvoting</groupId>
+	<artifactId>app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>bbb</name>
+	<name>BBB Voting App</name>
 	
 	<description>Votacao BBB</description>
 	

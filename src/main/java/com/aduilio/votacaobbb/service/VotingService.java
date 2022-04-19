@@ -13,6 +13,12 @@ public class VotingService {
 
 	private final KafkaTemplate<Object, Object> template;
 
+	/**
+	 * Add an event to the Kafka topic 'voting'.
+	 *
+	 * @param participantId the identification of the participant that receives a
+	 *                      vote
+	 */
 	public void addEvent(String participantId) {
 		template.send(VOTING_TOPIC, participantId);
 	}

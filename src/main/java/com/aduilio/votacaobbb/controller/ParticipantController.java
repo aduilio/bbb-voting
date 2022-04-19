@@ -27,6 +27,7 @@ public class ParticipantController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<Participant> save(@RequestBody Participant participant) {
 		Participant result = repository.save(participant);
+
 		return ResponseEntity.ok(result);
 	}
 
